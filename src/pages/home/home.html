@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="padding: 0;">
+      {{ title }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let post of posts" (click)="openPost(post)">
+      <h2 [innerHTML]="post.title"></h2>
+      <p [innerHTML]="post.author.displayName"></p>
+    </button>
+  </ion-list>
+</ion-content>
